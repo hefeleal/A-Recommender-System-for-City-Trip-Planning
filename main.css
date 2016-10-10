@@ -1,0 +1,418 @@
+body {
+	background-color: rgba(51, 51, 51, 0.6);
+}
+
+a {
+	color: #183950;
+}
+
+a:hover {
+	color: #183950;
+}
+
+#map-canvas {
+	height: 400px;
+	z-index: 3;
+}
+
+.panel-primary > .panel-heading, #feedbackButton {
+	color: #FFF;
+	background-color: #183950;
+}
+
+#feedbackButton:hover {
+	background-position: -200% 0;
+}
+
+.panel-primary > .panel-heading {
+	font-size: 18px;
+}
+
+.panel-primary {
+	border: 0;
+}
+
+.panel {
+	background-color: #C9C9C9;
+	color: #0a1924;
+	border: 1px solid #333;
+}
+
+.panel-body p, .feedbackLikeBetterText {
+	font-size: 16px;
+}
+
+.jumbotron {
+	background-color: #333;
+	color: #FFF;
+	padding-bottom: 10px;
+}
+
+#museum, #nightlife, #food, #nature, #music, #shopping {
+	 padding-bottom: 5px;
+	 padding-left: 5px;
+	 border-radius: 3px;
+}
+
+#museum h3, #nightlife h3, #food h3, #nature h3, #music h3, #shopping h3 {
+	padding-top: 5px;
+}
+
+.btn-info, #feedbackLikeBetterBlueRouteButton, #feedbackLikeBetterRedRouteButton, #feedbackLikeBetterNoRouteButton {
+	border-color: #183950;
+	background-color: #FFF;
+	color: #000;
+}
+
+.btn-info.active, .btn-info:hover {
+	border-color: #183950;
+	background-color: #183950;
+}
+
+#feedbackTable td, #feedbackTable2 td {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+}
+
+#walkingTimeLabelBlue, .btn-primary, #feedbackLikeBetterBlueRouteButton.active, #feedbackLikeBetterBlueRouteButton:hover {
+	background-color: #25ACF6;
+	color: #000;
+}
+
+#feedbackLikeBetterNoRouteButton:hover, #feedbackLikeBetterNoRouteButton.active {
+	border-color: #183950;
+	background-color: #848484;
+	color: #000;
+}
+
+#walkingTimeLabelRed, .btn-danger, #feedbackLikeBetterRedRouteButton.active, #feedbackLikeBetterRedRouteButton:hover {
+	background-color: #FF593E;
+	color: #000;
+}
+
+#walkingTimeLabelBlue, #walkingTimeLabelRed {
+	display: none;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 18px;
+	padding: 5px;
+	z-index: 5;
+	border-radius: 3px;
+}
+
+#visibilityRow {
+	visibility: hidden;
+}
+
+#visibilityRow div, #visibilityRow p {
+	z-index: 5;
+}
+
+/* feedback options: */
+#feedbackBanner {
+	position: fixed;
+	z-index: 1000;
+	font-size: 18px;
+	height: 1px;
+	width: 1px;
+	top: 50%;
+	-ms-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+	visibility: hidden;
+	opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out 1s;
+    transition: opacity 0.6s ease-out 1s;
+}
+
+#feedbackBanner a {
+	position: absolute;
+	background-color: #FFF;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 0px 25px;
+	font-weight: bold;
+	outline: 0;
+	text-decoration: none;
+}
+
+#feedbackBanner a:hover {
+	cursor: pointer;
+}
+
+#feedbackOptions, #feedbackOptionsBackface {
+    width: 100%;
+    vertical-align: middle;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+    -webkit-transition: all 0.7s cubic-bezier(0.45,0.05,0.55,0.95) 0s;
+    transition: all 0.7s cubic-bezier(0.45,0.05,0.55,0.95) 0s;
+}
+
+#feedbackOptionsContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-transition: all 0.6s cubic-bezier(0.37, -0.05, 0.02, 1.01);
+    transition: all 0.6s cubic-bezier(0.37, -0.05, 0.02, 1.01);
+}
+
+#feedbackOptionsBackface {
+	display: none;
+    -ms-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+#feedbackOptionsFlipper {
+    width: 100%;
+    position: relative;
+}
+
+#feedbackOptionsContainer.feedbackSent #feedbackOptionsBackface {
+    -ms-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+#feedbackOptionsContainer.feedbackSent #feedbackOptions {
+    -ms-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.slider-handle {
+	background-color: #333;
+	background-image: linear-gradient(to bottom, #757575 0px, #000 100%);
+}
+
+/* infowindow style */
+.myInfoWindow {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.myInfoWindow h4 {
+	text-align: center;
+}
+
+.myInfoWindow span {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.myInfoWindow hr {
+	margin: 3px 0px;
+	border-color: #9C9C9C;
+}
+
+#foursquareImg {
+	width: 180px;
+	float: right;
+}
+.mobileOnly {
+	display: none;
+}
+
+/* adjusting feedback panel for smaller devices: */
+@media (max-width: 767px) {
+	.slider.slider-horizontal {
+		width: 100px;
+	}
+	.panel-body table p, .feedbackLikeBetterText {
+		font-size: 15px;
+	}
+	#feedbackBanner {
+		font-size: 12px;
+	}
+	.mobileOnly {
+		display: block;
+	}
+}
+
+@media (max-width: 575px) {
+	.slider.slider-horizontal {
+		width: 80px;
+	}
+	.panel-body table p {
+		font-size: 10px;
+	}
+	.shrinkPadding{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.feedbackLikeBetterText {
+		font-size: 14px;
+	}
+	.shrinkText {
+		font-size: 10px;
+	}
+	.iconSidebarElement img {
+		width: 16px;
+	}
+	#foursquareImg {
+		width: 150px;
+	}
+	.kontaktImg {
+		width: 84px;
+	}
+}
+
+/* place tables: */
+#placeTableBlue, #placeTableRed {
+	color: #000;
+	width: 100%;
+    text-align: left;
+    border-style: none;
+}
+
+#placeTableBlue td, #placeTableBlue th, #placeTableRed td, #placeTableRed th {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#placeTableBlue tr td:nth-child(n+3), #placeTableBlue tr th:nth-child(n+3), 
+#placeTableRed tr td:nth-child(n+3), #placeTableRed tr th:nth-child(n+3) {
+    text-align: center;
+}
+
+#placeTableBlue tbody tr:nth-child(even) {
+    background-color: #D0D6E4;
+}
+
+#placeTableBlue tbody tr:nth-child(odd) {
+    background-color: #C4C9D7;
+}
+
+#placeTableBlue th {
+    background-color: #25ACF6;
+}
+
+#placeTableRed tbody tr:nth-child(even) {
+    background-color: #EAE1E1;
+}
+
+#placeTableRed tbody tr:nth-child(odd) {
+    background-color: #E0D4D4;
+}
+
+#placeTableRed th {
+    background-color: #FF593E;
+}
+
+#placeTablesPanel {
+	margin-top: 20px;
+	display: none;
+}
+
+.placeTableDiv {
+	overflow: auto;
+	box-shadow: 5px 5px 15px #333;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid #333;
+}
+
+#placeTableFootnote {
+	margin-top: 15px;
+	text-align: center;
+}
+
+/* Tabs & dialogs */
+.nav a, .modal {
+	color: #000;
+}
+
+.tabbable {
+	box-shadow: 5px 10px 15px #333;
+}
+
+.nav a {
+	color: #333;
+}
+
+.nav-tabs {
+	border-bottom-color: #333;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	border-color: #333 #333 transparent;
+}
+.nav-tabs > li > a:hover {
+	border-color: #333;
+}
+.nav-tabs > li > a {
+	border-color: transparent transparent #333;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	color: #000;
+}
+
+#pageOverlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: block;
+    background-color: #000;
+    opacity: 0.7;
+    display: none;
+}
+
+#spinnerIcon {
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/* icons from https://foursquare.com/img/categories/<category>/default_32.png */
+.categoryIcon {
+	margin-right: 5px;
+}
+
+.iconSidebarElement {
+	padding: 3px;
+	border-radius: 3px;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 130%;
+}
+
+@media (max-width: 991px){
+	.iconSidebarElement {
+		width: 170%;
+	}
+}
+
+@media (max-width: 767px) {
+	.iconSidebarElement {
+		float: left;
+		margin-left: 4%;
+		width: 12%;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+}
+
+.iconSidebarElement img {
+	display: block;
+	margin: auto;
+}
