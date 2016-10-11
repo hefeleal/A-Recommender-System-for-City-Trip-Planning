@@ -12,7 +12,7 @@ My task was to find interesting locations (like sights and bars) on a certain ro
 
 I conducted a survey with over 120 participants and found out that my implementation received better ratings than the baseline approach.
 
-![Main result](https://raw.githubusercontent.com/hefeleal/A-Recommender-System-for-City-Trip-Planning/master/screenshots/main_result.svg)
+![Main result](https://raw.githubusercontent.com/hefeleal/A-Recommender-System-for-City-Trip-Planning/master/screenshots/main_result.png)
 
 ## Implementation
 
