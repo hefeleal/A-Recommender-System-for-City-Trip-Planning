@@ -23,3 +23,7 @@ For a more detailled description of the project please refer to my [thesis](http
 ## Try it out
 
 You can test it live [here](http://vmschlichter21.informatik.tu-muenchen.de:8000/).
+
+## Further reading
+
+We submitted a research paper on this topic to the ENTER 2016 conference. It received the third price of the best research paper award and was published in [Information and Communication Technologies in Tourism 2016](http://www.springer.com/de/book/9783319282305) (pages 441 - 453). You can download it [here](http://link.springer.com/chapter/10.1007%2F978-3-319-28231-2_32) (`DOI 10.1007/978-3-319-28231-2_32`).
